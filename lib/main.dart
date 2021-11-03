@@ -12,9 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      initialRoute: 'setup',
+      initialRoute: 'training',
       routes: routes,
       theme: ThemeData(
+        primaryColor: Colors.brown[800],
+        backgroundColor: Colors.brown[50],
+        disabledColor: Colors.brown[200],
         appBarTheme: AppBarTheme(
           centerTitle: true,
           elevation: 20,

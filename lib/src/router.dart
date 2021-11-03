@@ -1,8 +1,8 @@
 
 
 import 'package:flutter/cupertino.dart';
-import 'package:rbr/src/pages/setup.dart';
+import 'package:rbr/src/pages/training.dart';
 
 final Map<String, Widget Function(BuildContext)> routes = {
-  'setup' : ( _ ) => const Setup()
+  'training' : ( _ ) => const Training()
 };
