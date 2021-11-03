@@ -11,13 +11,13 @@ class DatosConvert extends ChangeNotifier{
   int nSalidas = 0;
   int nPatrones = 0;
   List<List<String>> entradas = [];
-  List<List<String>> salidas = [];
+  List<String> salidas = [];
   List<List<String>> _banco = [];
 
 
   DatosConvert();
 
-  Future<void> cargarCSV() async {
+  Future<bool> cargarCSV() async {
     entradas.clear();
     salidas.clear();
     _banco.clear();
@@ -30,7 +30,7 @@ class DatosConvert extends ChangeNotifier{
     );
 
     if( picked == null ) {
-      return;
+      return false;
     }
     Uint8List? uploadfile = picked.files.first.bytes;
     _banco = const Utf8Decoder().convert(uploadfile!.toList()).split('\n').map((e) => e.split(',')).toList();
@@ -44,9 +44,10 @@ class DatosConvert extends ChangeNotifier{
     nPatrones =  _banco.length;
     for (var e in _banco) {
       entradas.add(e.getRange(0, nEntradas).toList());
-      salidas.add(e.getRange(nSalidas, _banco.length).toList());
+      salidas.add(e.last);
     }
 
     notifyListeners();
+    return true;
   }
 }

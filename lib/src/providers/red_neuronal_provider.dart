@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:rbr/global/enviroment.dart';
+import 'package:rbr/src/global/enviroment.dart';
 import 'package:rbr/src/models/red_neuronal_model.dart';
 
 class RedNeuronalProvider extends ChangeNotifier{
