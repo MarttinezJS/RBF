@@ -16,16 +16,29 @@ class CustomInput<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
+
+    final color = Theme.of(context).primaryColor;
+
+    return TextField(
       controller: controller,
       keyboardType: keyboardType,
-      style: TextStyle(color: Theme.of(context).primaryColor),
+      cursorColor: color,
+      style: TextStyle(
+        color: color,
+        fontWeight: FontWeight.bold 
+      ),
       decoration: InputDecoration(
         labelText: label,
+        labelStyle: TextStyle( color: color ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: color,
+          )
+        ),
         border: OutlineInputBorder(
           borderRadius: const BorderRadius.all( Radius.circular( 10 ) ),
           borderSide: BorderSide(
-            color: Theme.of(context).primaryColor,
+            color: color,
             style: BorderStyle.solid
           )
         ),

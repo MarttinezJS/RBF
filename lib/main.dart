@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.brown[800],
           backgroundColor: Colors.brown[50],
           disabledColor: Colors.brown[200],
+          dividerColor: Colors.brown,
           appBarTheme: AppBarTheme(
             centerTitle: true,
             elevation: 20,

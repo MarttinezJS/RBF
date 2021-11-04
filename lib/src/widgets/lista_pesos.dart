@@ -4,7 +4,7 @@ class ListaPesos extends StatelessWidget {
 
   final List<double> pesos;
 
-  ListaPesos({
+  const ListaPesos({
     Key? key,
     required this.pesos  
   }) : super(key: key);

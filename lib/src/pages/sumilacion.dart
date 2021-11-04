@@ -30,6 +30,9 @@ class _SimulacionPageState extends State<SimulacionPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Simulacion'),
+        shape: const RoundedRectangleBorder(
+          borderRadius:  BorderRadius.only( bottomLeft: Radius.elliptical(60, 20))
+        ),
       ),
       body: BackgroundSimulacion(
         color: Theme.of(context).primaryColor,
